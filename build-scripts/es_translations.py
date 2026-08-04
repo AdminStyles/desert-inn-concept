@@ -81,7 +81,7 @@ STORY_BODY_ES = ("Desert Inn Sports Bar &amp; Grill es el destino vecinal de Met
 # ---------------------------------------------------------------------------
 CTA_TITLE_ES = "Ven a ver el partido"
 CTA_SUB_ES = "385 Jefferson Ave, Metolius, OR &middot; Llama con anticipación para el horario de hoy"
-CTA_BUTTON_ES = ORDER_LABEL_ES
+CTA_BUTTON_ES = "VER MENU"
 
 # ---------------------------------------------------------------------------
 # Find us

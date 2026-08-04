@@ -292,12 +292,19 @@ def cta_band():
     title_es = _es(C.CTA_TITLE, "CTA_TITLE_ES")
     sub_es = _es(C.CTA_SUB, "CTA_SUB_ES")
     button_es = _es(C.CTA_BUTTON, "CTA_BUTTON_ES")
+    # Opt-in: CTA_BUTTON_URL lets the primary CTA point somewhere other than
+    # ORDER_URL (e.g. "__MENU__" for a "View Menu" CTA on a client with no
+    # online ordering). Defaults to ORDER_URL for every existing client, so
+    # this is additive/backward-compatible. Internal site tokens (start with
+    # "__") skip target="_blank"/rel="noopener" since they're same-site links.
+    cta_url = getattr(C, "CTA_BUTTON_URL", None) or C.ORDER_URL
+    cta_ext_attrs = "" if cta_url.startswith("__") else ' target="_blank" rel="noopener"'
     return f"""<section class="cta-band" data-section="CTA"><div class="wrap">
   {left_plaque}
   <div class="center">
     <h2 data-es="{title_es}">{C.CTA_TITLE}</h2><p data-es="{sub_es}">{C.CTA_SUB}</p>
     <div class="cta-buttons">
-      <a class="btn btn-primary" href="{C.ORDER_URL}" target="_blank" rel="noopener" data-es="{button_es}">{C.CTA_BUTTON}</a>
+      <a class="btn btn-primary" href="{cta_url}"{cta_ext_attrs} data-es="{button_es}">{C.CTA_BUTTON}</a>
       {call_btn}
     </div>
   </div>

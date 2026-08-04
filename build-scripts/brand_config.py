@@ -256,7 +256,8 @@ STORY_BODY  = ("Desert Inn Sports Bar &amp; Grill is Metolius&rsquo; neighborhoo
 # ----------------------------------------------------------------------------
 CTA_TITLE  = "Come watch the game"
 CTA_SUB    = "385 Jefferson Ave, Metolius, OR &middot; Call ahead for today&rsquo;s hours"
-CTA_BUTTON = ORDER_LABEL
+CTA_BUTTON = "VIEW MENU"
+CTA_BUTTON_URL = "__MENU__"   # no online ordering, and the CALL button next to it already covers phone -- send this one to the menu instead
 CTA_SHOW_CALL = True
 
 # ----------------------------------------------------------------------------
