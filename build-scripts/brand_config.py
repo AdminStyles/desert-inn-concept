@@ -53,7 +53,7 @@ PHONE_DISPLAY = "541.546.7937"
 PHONE_TEL     = "+15415467937"
 ADDRESS_FULL  = "385 Jefferson Ave, Metolius, OR 97741"
 HOURS_TEXT    = "Call ahead for today&rsquo;s hours"   # not independently verified -- confirm with owner
-EMAIL         = ""   # site's only email is an admin/site-builder address, not a public contact -- confirm before use
+EMAIL         = "admin@desertinnsportsbarandgrill.com"   # pulled from their own contact page code; footer icon only -- George is calling first, not emailing, so confirm real inbox before relying on it for outreach
 MAP_EMBED_URL = "https://www.google.com/maps?q=Desert+Inn+Sports+Bar+%26+Grill,385+Jefferson+Ave,Metolius,OR+97741&output=embed"
 
 # ----------------------------------------------------------------------------
