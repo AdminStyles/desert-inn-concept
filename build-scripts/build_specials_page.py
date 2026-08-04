@@ -36,6 +36,7 @@ SPECIALS_CSS = """
 .menu-hero{background:radial-gradient(ellipse at 70% 30%,var(--accent) 0%,var(--accent-deep) 55%,var(--primary-deep) 100%);border:2px solid var(--cream);border-radius:16px;padding:36px 28px;margin-bottom:30px;text-align:center}
 .menu-hero .sec-tag{color:var(--cream)}
 .menu-hero h2{font-size:34px;text-transform:uppercase;margin:8px 0 10px;color:var(--primary-deep)}
+.menu-hero h2 .wordmark{font-family:var(--font-nav);font-weight:var(--font-nav-weight);color:var(--cream);text-shadow:0 2px 3px rgba(0,0,0,.4)}
 .menu-hero .lead{max-width:560px;margin:0 auto;color:var(--cream)}
 .menu-section{margin-bottom:40px}
 .menu-item{display:flex;justify-content:space-between;gap:18px;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
@@ -70,11 +71,15 @@ def build():
     intro_html = f'<p class="lead" data-es="{intro_es}">{page_intro}</p>' if page_intro else ""
     order_label_es = getattr(ES, "ORDER_LABEL_ES", C.ORDER_LABEL)
     call_label_es = getattr(ES, "CALL_LABEL_ES", "CALL")
+    # "Desert Inn" set in the same font as the header logo wordmark
+    # (--font-nav, Abril Fatface), matching the menu page's hero heading.
+    hero_title = page_title.replace(
+        "Desert Inn", '<span class="wordmark">Desert Inn</span>', 1)
     body = f"""{S.nav('specials')}
 <div class="menu-wrap" id="specials" data-section="SPECIALS">
   <div class="menu-hero" data-section="SPECIALS-HERO">
     <span class="sec-tag" data-es="{tag_es}">{page_tag}</span>
-    <h2>{page_title}</h2>
+    <h2>{hero_title}</h2>
     {intro_html}
   </div>
   <div class="menu-section" data-section="SPECIALS-LIST">{render_items(items)}</div>

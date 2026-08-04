@@ -212,7 +212,7 @@ EVENTS_SNAP = [
 # has a dedicated Specials page with 20 items, so we need one too instead of
 # quietly dropping the other 16. Verbatim from /specials/, checked 2026-08-03.
 SPECIALS_PAGE_TAG   = "SPECIALS"
-SPECIALS_PAGE_TITLE = "Our Specials"
+SPECIALS_PAGE_TITLE = "Desert Inn Specials"
 SPECIALS_PAGE_INTRO = "Something good every day of the week &mdash; here&rsquo;s the full list."
 SPECIALS_LIST = [
     ("Daily Lunch Special", "", "$10.99"),
