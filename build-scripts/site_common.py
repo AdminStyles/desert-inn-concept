@@ -422,7 +422,11 @@ def footer():
             f"<p>{ln}</p>" for ln in C.COMPLIANCE_LINES) + "</div>"
     import datetime
     yr = datetime.date.today().year
-    email_line = f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>' if C.EMAIL else ""
+    # Icon-only by default (social_icons() already links EMAIL as a mailto icon).
+    # Only show the email as a separate visible text line if a client explicitly
+    # wants it -- set SHOW_FOOTER_EMAIL_TEXT = True in brand_config.py.
+    email_line = (f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a>'
+                  if C.EMAIL and getattr(C, "SHOW_FOOTER_EMAIL_TEXT", False) else "")
     handle_line = (f'<a href="{C.INSTAGRAM_URL}" class="foot-handle" target="_blank" '
                    f'rel="noopener">{C.INSTAGRAM_HANDLE}</a>') if (C.INSTAGRAM_URL and C.INSTAGRAM_HANDLE) else ""
     import es_translations as ES
