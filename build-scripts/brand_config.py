@@ -242,7 +242,7 @@ SPECIALS_LIST = [
 # ----------------------------------------------------------------------------
 STORY_IMAGE     = "assets/story-welcome-patio.jpg"
 STORY_IMAGE_ALT = "The welcome sign over the patio at Desert Inn Sports Bar & Grill"
-STORY_IMG_MOBILE_POSITION = "right top"   # mobile box is much taller/narrower than desktop's; anchor crop to the welcome sign instead of default center
+STORY_IMG_MOBILE_POSITION = "left top"   # mobile box is much taller/narrower than desktop's; anchor crop to the welcome sign instead of default center
 STORY_TAG   = "OUR STORY"
 STORY_TITLE = "More than just a sports bar"
 STORY_BODY  = ("Desert Inn Sports Bar &amp; Grill is Metolius&rsquo; neighborhood "
