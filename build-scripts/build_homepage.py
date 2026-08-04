@@ -234,10 +234,15 @@ def events_snap():
         f'<div class="card">{_photo_block(img, alt, icon, d)}'
         f'<div class="body"><h4 data-es="{t_es}">{t}</h4><p data-es="{d_es}">{d}</p></div></div>'
         for (img, alt, t, d, icon), (t_es, d_es) in zip(norm_items, es_items))
+    # .snap-row is a SIBLING of .wrap, not nested inside it -- it needs to sit
+    # directly under <section> so its full-bleed CSS (100vw/negative-margin
+    # breakout, see site_common.py) is relative to the viewport, not capped by
+    # .wrap's 1180px max-width. The tag/heading stay inside .wrap so they line
+    # up with the rest of the page's text column.
     return (f'<section class="sec" id="events" data-section="EVENTS"><div class="wrap">'
             f'<div class="sec-tag" style="text-align:left" data-es="{tag_es}">{tag}</div>'
-            f'<h2 style="text-align:left;margin-bottom:32px" data-es="{title_es}">{title}</h2>'
-            f'<div class="snap-row">{cards}</div></div></section>')
+            f'<h2 style="text-align:left;margin-bottom:32px" data-es="{title_es}">{title}</h2></div>'
+            f'<div class="snap-row">{cards}</div></section>')
 
 def story():
     """Fat Tony's pattern: photo + text side by side (STORY_IMAGE). Falls back
