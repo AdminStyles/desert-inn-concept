@@ -19,6 +19,7 @@
   --font-body:'Inter',system-ui,Arial,sans-serif;
   --font-nav:'Abril Fatface',Georgia,serif;
   --font-nav-weight:400;
+  --story-mobile-pos:right top;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -190,6 +191,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.12;font-weight:600}
  .photo-cards{grid-template-columns:repeat(2,1fr)}
  .specials-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
  .story-flex{flex-direction:column}.story-img{flex:none;width:100%;height:310px}
+ .story-img img{object-position:var(--story-mobile-pos)}
  .cta-band .wrap{flex-direction:column;gap:24px}
  .cta-plaque img{width:90px}
  .cta-band .center{flex:none;width:100%}

@@ -27,6 +27,7 @@ def css_root():
   --font-body:'{C.FONT_BODY}',system-ui,Arial,sans-serif;
   --font-nav:'{getattr(C, "NAV_WORDMARK_FONT", "") or C.FONT_HEADING}',Georgia,serif;
   --font-nav-weight:{700 if getattr(C, "NAV_WORDMARK_BOLD", True) else 400};
+  --story-mobile-pos:{getattr(C, "STORY_IMG_MOBILE_POSITION", "center")};
 }}"""
 
 
@@ -202,6 +203,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.12;font-weight:600}
  .photo-cards{grid-template-columns:repeat(2,1fr)}
  .specials-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
  .story-flex{flex-direction:column}.story-img{flex:none;width:100%;height:310px}
+ .story-img img{object-position:var(--story-mobile-pos)}
  .cta-band .wrap{flex-direction:column;gap:24px}
  .cta-plaque img{width:90px}
  .cta-band .center{flex:none;width:100%}
