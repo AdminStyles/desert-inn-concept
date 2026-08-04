@@ -174,7 +174,8 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.12;font-weight:600}
 .foot-handle{color:var(--accent);font-weight:700;font-size:14px}
 .compliance{margin:26px auto 0;max-width:600px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
 .compliance p{font-size:12px;opacity:.55;line-height:1.5}
-.copyright{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:var(--cream-muted);opacity:.7}
+.copyright{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:var(--cream-muted);opacity:.7;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.copyright .maintain-credit a{display:inline;margin-bottom:0;color:var(--accent);font-weight:600;opacity:1}
 /* back to top (Fat Tony's pattern: bare brand icon, no circle) */
 .totop{position:fixed;bottom:28px;right:28px;width:54px;height:54px;background:none;border:0;cursor:pointer;padding:0;opacity:0;pointer-events:none;transform:translateY(16px) rotate(-15deg);transition:opacity .3s ease,transform .3s ease;z-index:999;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
 .totop img{width:100%;height:100%;object-fit:contain}
@@ -436,7 +437,7 @@ def footer():
   {handle_line}
   {email_line}
   {compliance}
-  <p class="copyright" data-es="&copy; {yr} {C.BUSINESS_NAME}. Todos los derechos reservados.">&copy; {yr} {C.BUSINESS_NAME}. All rights reserved.</p>
+  <div class="copyright"><span data-es="&copy; {yr} {C.BUSINESS_NAME}. Todos los derechos reservados.">&copy; {yr} {C.BUSINESS_NAME}. All rights reserved.</span><span class="maintain-credit" data-es-html='Sitio construido y mantenido con <a href="https://maintain-styles.pages.dev" target="_blank" rel="noopener">mAIntAIn Styles</a>'>Site built &amp; maintained with <a href="https://maintain-styles.pages.dev" target="_blank" rel="noopener">mAIntAIn Styles</a></span></div>
 </div></footer>"""
 
 
