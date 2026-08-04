@@ -232,7 +232,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.12;font-weight:600}
    Good for weekly specials/recurring events -- a sports bar's game nights,
    trivia, taco night, etc. */
 .snap-row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
-.snap-row .card{scroll-snap-align:start;flex:1 1 220px;background:var(--panel);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.snap-row .card{scroll-snap-align:start;flex:0 0 220px;min-width:220px;background:var(--panel);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
 .snap-row .card .ph{height:150px;overflow:hidden;background:var(--bg-deep)}
 .snap-row .card .ph img{width:100%;height:100%;object-fit:cover;display:block}
 .snap-row .card .body{padding:16px}
