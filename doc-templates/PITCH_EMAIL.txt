@@ -1,0 +1,33 @@
+Subject: I rebuilt [Client]'s website — take a look
+
+Hi [Owner],
+
+I'm a local web guy here in [city]. I put together a concept version of a new
+website for [Client] — on my own time, no strings — because I thought your spot
+deserved a site that matches how good the [food / product / service] is.
+
+Here it is, live: [pages.dev link]
+
+A few things worth knowing:
+- It's fast, works great on phones, and it's built to run on free hosting
+  (Cloudflare) — so there's no monthly hosting bill like Squarespace or Wix.
+- I manage it for you. Need to change your hours, a price, a special, a photo?
+  You just tell me (or an AI assistant) in plain English and it's updated in
+  minutes. You never touch code and never need to hire a developer.
+- Your live menu / ordering stays exactly as it is — [Dutchie / TouchBistro /
+  etc.] plugs right in and updates itself.
+
+What are you paying now for your current site? I can almost certainly do more for
+less — and take the whole headache off your plate.
+
+Want to grab five minutes this week? Happy to walk you through it.
+
+Thanks,
+[Your name]
+[phone] · [email]
+
+---
+NOTES (delete before sending):
+- Anchor high, know your floor, keep the floor private.
+- Send from your business account, not OCH.
+- If it lands in a shared inbox, add a line asking them to pass it to the owner.
