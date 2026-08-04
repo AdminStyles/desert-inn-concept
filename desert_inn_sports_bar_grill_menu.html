@@ -241,7 +241,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.12;font-weight:600}
    .snap-row div must be a sibling of (not nested inside) .wrap for this to
    work -- see events_snap() in build_homepage.py. */
 .snap-row{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(32px,calc((100vw - 1180px)/2 + 32px)) 10px;-webkit-overflow-scrolling:touch;width:100vw;position:relative;left:50%;margin-left:-50vw}
-.snap-row .card{scroll-snap-align:start;flex:0 0 220px;min-width:220px;background:var(--panel);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.snap-row .card{scroll-snap-align:start;flex:1 1 220px;min-width:220px;background:var(--panel);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
 .snap-row .card .ph{height:150px;overflow:hidden;background:var(--bg-deep)}
 .snap-row .card .ph img{width:100%;height:100%;object-fit:cover;display:block}
 .snap-row .card .body{padding:16px}
@@ -255,7 +255,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.12;font-weight:600}
    cascade at equal specificity -- media-scoping does not add specificity,
    only source order does, so an override placed earlier in the file loses to
    an unconditional rule declared later, even when its condition is true. */
-@media(max-width:900px){.snap-row{display:grid;grid-template-columns:1fr;max-width:440px;margin:0 auto;overflow-x:visible;scroll-snap-type:none;width:auto;position:static;left:auto;padding:0}}
+@media(max-width:900px){.snap-row{display:grid;grid-template-columns:1fr;max-width:440px;margin:0 auto;overflow-x:visible;scroll-snap-type:none;width:auto;position:static;left:auto;padding:0 32px}}
 /* Add-on: "coming soon" placeholder for an EVENTS_SNAP card with no photo yet
    (img=None in brand_config.py) -- styled like an actual promo/ad graphic for
    the special (corner ribbon + big price badge + oversized watermark icon),
